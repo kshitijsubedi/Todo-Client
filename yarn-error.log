@@ -1,0 +1,59 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add -D parcel@next
+
+PATH: 
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\horizon\AppData\Local\Microsoft\WindowsApps;C:\adb;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2020.3.1\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\VSCodium\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\PostgreSQL\13\bin;C:\Program Files\Git\cmd;C:\Users\horizon\.cargo\bin;C:\Users\horizon\AppData\Local\Yarn\bin;C:\Program Files\Oracle\VirtualBox;C:\Program Files\gecko;C:\Users\horizon\AppData\Local\Programs\Python\Python39\;C:\Users\horizon\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files (x86)\GitHub CLI\;C:\Users\horizon\AppData\Local\atom\bin;C:\Users\horizon\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\horizon\Documents\LeapFroggggg\Node-ExpJS-Project\Client\package.json: Unexpected token } in JSON at position 685
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "todo-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "format": "prettier --write \"src/**/*.{js,jsx}\"",
+      "lint": "prettier --check \"src/**/*.{js,jsx}\""
+    },
+    "dependencies": {
+      "axios": "^0.21.1",
+      "history": "^5.0.0",
+      "http-status": "^1.5.0",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-icons": "^4.2.0",
+      "react-redux": "^7.2.4",
+      "react-router-dom": "^5.2.0",
+      "redux": "^4.1.0",
+      "redux-thunk": "^2.3.0",
+      "yup": "^0.32.9"
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.14.5",
+      "@babel/core": "^7.14.6",
+      "@babel/preset-react": "^7.14.5",
+      "prettier": "^2.2.1",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

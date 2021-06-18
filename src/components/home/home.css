@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.todo-app {
+  font-family: 'Varela Round', sans-serif;
+  min-width: 400px;
+  max-width: 50%;
+  min-height: 480px;
+  max-height: 100%;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
+  padding: 3em;
+  margin-top:20vh;
+  margin-left:20vw;
+}
+
+.todo-title {
+  margin-bottom: auto;
+  margin-top: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.todo-list {
+  font-size: 100%;
+  list-style: none;
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: 2rem;
+}
+
+.todo {
+  line-height: 1.5;
+  position: relative;
+  padding: 0 2.5rem 0 0.75rem;
+  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.todo:after {
+  position: absolute;
+  right: 0.75rem;
+  color: #2ecc71;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform, opacity, 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.todo + .todo {
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+.todo + .todo:before {
+  content: "";
+  background: #e8ebed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 2px;
+}
+.todo__content {
+  position: relative;
+  opacity: 1;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
+}
+.todo__content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc( 100% + .5em );
+  left: -0.25em;
+  height: 2px;
+  top: 50%;
+  border-radius: 1px;
+  background: #2E2E2E;
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.todo.todo--completed:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.todo.todo--completed .todo__content {
+  opacity: 0.5;
+}
+.todo.todo--completed .todo__content:after {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
+
+.todo-enter {
+  opacity: 0;
+  padding-top: 0;
+  margin-top: 0;
+  max-height: 0;
+  transform: translateX(-100%);
+  transition: opacity 500ms ease-out, transform 750ms cubic-bezier(0.87, -0.41, 0.19, 1.44), max-height 500ms ease-out, padding 500ms ease-out, margin 500ms ease-out;
+}
+
+.todo-enter.todo-enter-active {
+  opacity: 1;
+  max-height: 100px;
+  transform: translateX(0);
+}
+
+.todo-leave {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms ease-out, transform 750ms cubic-bezier(0.87, -0.41, 0.19, 1.44), max-height 500ms ease-out, padding 500ms ease-out, margin 500ms ease-out;
+}
+
+.todo-leave.todo-leave-active {
+  opacity: 0;
+  padding-top: 0;
+  margin-top: 0;
+  max-height: 0;
+  transform: translateX(100%);
+}
+
+.add-todo {
+  width: 100%;
+  position: relative;
+  margin: 2rem 0;
+}
+.add-todo__btn {
+  text-align: center;
+  color: #fafafa;
+  line-height: 1;
+  position: absolute;
+  font-size: 150%;
+  right: -5%;
+  top: -5%;
+  border-radius: 10%;
+  width: 40px;
+  height: 40px;
+  background: #2ecc71;
+  border:0;
+  opacity: 0;
+}
+.add-todo__btn:focus {
+  opacity: 1;
+}
+.add-todo__btn:active {
+  opacity: 1;
+}
+.add-todo__input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  background: #e8ebed;
+  margin: 0;
+  outline: 0;
+  border: 2px solid #e8ebed;
+  transition: background 0.25s ease-out;
+}
+.add-todo__input:focus {
+  background: none;
+}
+.add-todo__input:focus + .add-todo__btn {
+  opacity: 1;
+}
+
+.filters .filter__link {
+  margin: 0 1em;
+  font-size: 150%;
+}
+
+.filters .filter__link :hover {
+  transform: scale(1.1);
+}
+
+.log-out {
+  border:0;
+  border-radius: 5px;
+  padding:10px;
+  position: absolute;
+  top: 21vh;
+  left:62vw;
+  background-color:gainsboro;
+}
