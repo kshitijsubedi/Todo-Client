@@ -13,7 +13,7 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.log(error,errorInfo)
+    console.log(error, errorInfo);
     //sentry.catchErrorsWithScope(error, errorInfo);
   }
 

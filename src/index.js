@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import './style.css'
-import init from './init'; 
+import './style.css';
+import init from './init';
 import store from './store';
 import App from './components/App';
 

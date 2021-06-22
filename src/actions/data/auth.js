@@ -1,6 +1,7 @@
 export const SET_LOGGING_IN = 'SET_LOGGING_IN';
 export const SET_IS_LOGGED_IN = 'SET_IS_LOGGED_IN';
 export const SET_LOGGED_IN_USER = 'SET_LOGGED_IN_USER';
+export const SET_REGISTERING_IN = 'SET_REGISTERING_IN';
 
 /**
  * Action creator for changing loading state for login.
@@ -12,6 +13,18 @@ export function setLoggingIn(isLoggingIn) {
   return {
     data: isLoggingIn,
     type: SET_LOGGING_IN,
+  };
+}
+/**
+ * Action creator for changing loading state for register.
+ *
+ * @param {boolena} isRegisteringIn
+ * @returns {object}
+ */
+export function setRegisteringIn(isRegisteringIn) {
+  return {
+    data: isRegisteringIn,
+    type: SET_REGISTERING_IN,
   };
 }
 
@@ -40,4 +53,3 @@ export function setLoggedInUser(user) {
     type: SET_LOGGED_IN_USER,
   };
 }
-

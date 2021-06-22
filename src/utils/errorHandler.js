@@ -1,4 +1,4 @@
-import _get from 'lodash/get';
+import _get from 'lodash';
 
 import config from '/src/config';
 import * as toast from './toast';
@@ -18,10 +18,11 @@ const NETWORK_ERROR_MESSAGE = 'Please check your internet connection.';
  */
 export function handleError(event, options = {}) {
   if (config.env !== env.PRODUCTION) {
-    console.log(event);
+    console.log(event.response.data || event);
   }
-  
-  let message = _get(event, 'response.data.error.message', GENERIC_ERROR);
+
+  //let message = _get(event, 'response.data.message', GENERIC_ERROR);
+  let message = event.response.data.message || GENERIC_ERROR;
 
   if (event && event.message === errors.NETWORK_ERROR) {
     message = NETWORK_ERROR_MESSAGE;

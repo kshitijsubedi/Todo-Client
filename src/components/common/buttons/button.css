@@ -1,41 +1,19 @@
 .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.12);
-    background-color: #F2F8FF;
-    text-transform: capitalize;
-    cursor: pointer;
-    border: hidden;
-  }
-  .button:hover, .button:focus {
-    transition: 0.15s ease-in-out;
-  }
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  margin-top:25px;
+  color:#fff;
+  background-color: #4d36fd;
+  border:0;
+  line-height: 1.5;
+  padding:9px 20px;
+  border-radius: 0;
+  min-height: 35px;
+  text-align: center;
+}
 
-  .login-button {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    width: 100%;
-    padding: 20px 15px;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 40px 0;
-  }
-  .blue:focus, .blue:hover {
-    box-shadow: 0px 3px 20px 3px rgba(0, 122, 255, 0.3);
-  }
-
-  .blue {
-    background-color: #007AFF;
-  }
-  .green {
-    background-color: rgb(51, 126, 51);
-  }
-  .green:focus, .green:hover {
-    box-shadow: 0px 3px 20px 3px rgba(51,126,51, 0.3);
-  }
+.button:hover{
+  text-decoration: none;
+  background-color: #3a22fa;
+}

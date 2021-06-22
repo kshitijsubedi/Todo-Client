@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 720px;
+  }
+   header .date .day {
+    display: inline-block;
+    font-family: "Quicksand", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #5b47fb;
+  }
+   header .date span {
+    display: inline-block;
+    margin-left: 5px;
+  }
+   header .date span p {
+    line-height: 6px;
+  }
+   header .dayinword {
+    font-family: "Poppins", sans-serif;
+    line-height: 60px;
+    transition: 150ms ease;
+    width: 20%;
+  }
+  header .dayinword:hover {
+    color: #5b47fb;
+    transition: 150ms ease;
+  }

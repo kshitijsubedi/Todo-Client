@@ -1,55 +1,67 @@
+.card-wrapper{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto','sans-serif';
+}
+
 .card {
-  margin: 2rem auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 425px;
-  background-color: #FFF;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px 0 rgba(153, 153, 153, 0.25);
-  padding: 0.75rem;
+  justify-content: space-between;
+  padding:30px 35px;
+  width: 360px;
+ border:1px solid #cdd4e0;
+  background-color: rgba(255,255,255,0.5);
 }
 
-.card-image {
-  border-radius: 8px;
-  overflow: hidden;
-  padding-bottom: 65%;
-  background-image: url('/src/assets/images/coffee.webp');
-  background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: 0 5%;
-  position: relative;
-}
-
-.card-heading {
-  position: absolute;
-  left: 10%;
-  top: 15%;
-  right: 10%;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #735400;
-  line-height: 1.222;
-}
-.card-heading small {
-  display: block;
-  font-size: 0.75em;
-  font-weight: 400;
-  margin-top: 0.25em;
-}
-
-.card-info {
-  padding: 1rem 1rem;
-  text-align: center;
-  font-size: 0.875rem;
-  color: #8597a3;
-}
-.card-info a {
-  display: block;
-  color: #6658d3;
-  text-decoration: none;
-}
 .children {
   justify-content: center;
-  padding: 1rem;
+}
+
+.card-logo {
+  font-weight: 700;
+font-size: 28px;
+font-family: 'Poppins', sans-serif;
+text-transform: lowercase;
+color: #5b47fb;
+letter-spacing: -1px;
+display: flex;
+align-items: center;
+position: relative;
+top: -2px;
+}
+
+.card-header h2 {
+  font-weight: 500;
+color: #5b47fb;
+letter-spacing: -1px;
+font-size: 1.75rem;
+margin-bottom: 0.5rem;
+line-height: 1.2;
+}
+.card-header h4{
+  font-weight: 400;
+  color: #1c273c;
+  margin-bottom: 25px;
+  font-size:1.3resm;
+  line-height: 1.2;
+}
+.card-footer{
+  margin-top:3rem;
+}
+.card-footer p {
+  margin-bottom: 5px;
+  color: #7987a1;
+  font-size: 0.9rem;
+}
+.card-footer .card-route {
+  text-decoration: none;
+background-color: transparent;
+color: #1c273c;
+font-weight: 700;
+}
+.card-footer .card-route:hover {
+  color:#3366ff
 }

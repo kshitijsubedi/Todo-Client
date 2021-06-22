@@ -7,4 +7,4 @@ import notifications from './images/notification-icon.svg';
 import emptyScreen from './images/frog.svg';
 import Coffee from './images/coffee.webp';
 
-export { emptyScreen, logoFull, logo, calendar, logout, dropIcon, notifications,Coffee };
+export { emptyScreen, logoFull, logo, calendar, logout, dropIcon, notifications, Coffee };

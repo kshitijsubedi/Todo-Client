@@ -14,9 +14,10 @@ const config = {
     users: {
       self: '/users/me',
     },
-    todo:{
-      all:'/todo/all',
-      create:'/todo/create'
+    todo: {
+      main: '/todo',
+      all: '/todo/all',
+      create: '/todo/create',
     },
   },
 };

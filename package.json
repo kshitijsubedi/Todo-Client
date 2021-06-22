@@ -1,7 +1,7 @@
 {
   "name": "todo-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "public/index.html",
   "license": "MIT",
   "scripts": {
     "start": "parcel serve ./public/index.html",
@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "formik": "^2.2.9",
-    "history": "^5.0.0",
+    "history": "4.10.1",
     "http-status": "^1.5.0",
     "izitoast": "^1.4.0",
     "react": "^17.0.2",
@@ -24,6 +24,7 @@
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
     "uuid": "^8.3.2",
+    "webfontloader": "^1.6.28",
     "yup": "^0.32.9"
   },
   "devDependencies": {

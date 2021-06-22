@@ -1,7 +1,7 @@
 export const HOME = '/';
 
 export const LOGIN = '/login';
-export const REGISTER = '/register'
+export const REGISTER = '/register';
 
 export const EMPLOYEES = '/employees';
 export const EMPLOYEES_ADD = '/employees/add';

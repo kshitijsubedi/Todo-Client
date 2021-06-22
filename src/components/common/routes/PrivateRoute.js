@@ -6,21 +6,20 @@ import * as routes from '/src/constants/routes';
 import * as tokenService from '/src/services/token';
 import { getAccessToken } from '../../../services/token';
 
-
 export default function PrivateRoute({ children, ...rest }) {
-  const isLogin = getAccessToken()
+  const isLogin = getAccessToken();
 
   return (
     <Route
       {...rest}
       render={({ location }) =>
-        isLogin? (
+        isLogin ? (
           children
         ) : (
           <Redirect
             to={{
               pathname: routes.LOGIN,
-              state: { from: location }
+              state: { from: location },
             }}
           />
         )

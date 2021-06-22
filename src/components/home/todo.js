@@ -1,6 +1,6 @@
 import './home.css';
 import React from 'react';
-import {FiPlus,FiList,FiCheck,FiX} from 'react-icons/fi'
+import { FiPlus, FiList, FiCheck, FiX } from 'react-icons/fi';
 
 export const Todo = ({ onClick, completed, text }) => (
   <li className={completed ? 'todo todo--completed' : 'todo'} onClick={onClick}>
@@ -11,10 +11,12 @@ export const Todo = ({ onClick, completed, text }) => (
 export const TodoList = ({ todos, onTodoClick }) => {
   return (
     <div>
-      {todos.length>0?todos.map(todo => (
-        <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />
-      )):<p>Empty. Try Adding one 😀</p>}
-      </div>
+      {todos.length > 0 ? (
+        todos.map(todo => <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />)
+      ) : (
+        <p>Empty. Try Adding one 😀</p>
+      )}
+    </div>
   );
 };
 
@@ -35,7 +37,7 @@ export const AddTodo = ({ onAddClick }) => {
           input.value = '';
         }}
       >
-       <FiPlus/>
+        <FiPlus />
       </button>
     </div>
   );
@@ -59,13 +61,13 @@ export const FilterLink = ({ filter, currentFilter, children, onClick }) => {
 export const Footer = ({ visibilityFilter, onFilterClick }) => (
   <div className="filters">
     <FilterLink filter="SHOW_ALL" currentFilter={visibilityFilter} onClick={onFilterClick}>
-      <FiList style={{color:'blue'}}/>
+      <FiList style={{ color: 'blue' }} />
     </FilterLink>
     <FilterLink filter="SHOW_ACTIVE" currentFilter={visibilityFilter} onClick={onFilterClick}>
-     <FiX  style={{color:'red'}}/>
+      <FiX style={{ color: 'red' }} />
     </FilterLink>
     <FilterLink filter="SHOW_COMPLETED" currentFilter={visibilityFilter} onClick={onFilterClick}>
-     <FiCheck  style={{color:'green'}}/>
+      <FiCheck style={{ color: 'green' }} />
     </FilterLink>
   </div>
 );
